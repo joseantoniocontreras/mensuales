@@ -1,2 +1,0 @@
-# mensuales
-Actualizar mensual
