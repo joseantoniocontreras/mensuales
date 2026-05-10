@@ -281,7 +281,7 @@ tr:hover td{background:rgba(255,255,255,.015)}
         <option value="Servicios">📱 Servicios</option>
         <option value="Habitación">🏠 Habitación</option>
         <option value="Niños (Silvia)">👦 Niños (Silvia)</option>
-        <option value="Barbara">💛 Bárbara</option>
+        <option value="Barbara">👶 Bárbara (mamá Mathias)</option>
         <option value="Mamá">❤ Mamá</option>
         <option value="Tarjeta crédito">💳 Tarjeta crédito</option>
         <option value="Compras">🛍 Compras</option>
@@ -410,28 +410,28 @@ const txCorreo = [
   // Enero
   {date:'2026-01-02',desc:'🏠 Habitación',amount:850,type:'egreso',src:'Estimado',cat:'Habitación'},
   {date:'2026-01-02',desc:'👦 Pensión niños (Silvia Concepción)',amount:500,type:'egreso',src:'BCP',cat:'Niños (Silvia)'},
-  {date:'2026-01-02',desc:'💛 Bárbara Bardales',amount:250,type:'egreso',src:'BCP',cat:'Barbara'},
+  {date:'2026-01-02',desc:'👶 Bárbara Bardales (mamá Mathias)',amount:250,type:'egreso',src:'BCP',cat:'Barbara'},
   {date:'2026-01-05',desc:'❤ Mamá',amount:100,type:'egreso',src:'BCP',cat:'Mamá'},
   {date:'2026-01-10',desc:'📱 Teléfono Movistar',amount:130,type:'egreso',src:'BBVA',cat:'Servicios'},
   {date:'2026-01-10',desc:'🎬 Netflix',amount:10,type:'egreso',src:'BBVA',cat:'Servicios'},
   // Feb
   {date:'2026-02-02',desc:'🏠 Habitación',amount:850,type:'egreso',src:'Estimado',cat:'Habitación'},
   {date:'2026-02-02',desc:'👦 Pensión niños (Silvia)',amount:500,type:'egreso',src:'BCP',cat:'Niños (Silvia)'},
-  {date:'2026-02-02',desc:'💛 Bárbara Bardales',amount:250,type:'egreso',src:'BCP',cat:'Barbara'},
+  {date:'2026-02-02',desc:'👶 Bárbara Bardales (mamá Mathias)',amount:250,type:'egreso',src:'BCP',cat:'Barbara'},
   {date:'2026-02-05',desc:'❤ Mamá',amount:100,type:'egreso',src:'BCP',cat:'Mamá'},
   {date:'2026-02-10',desc:'📱 Teléfono Movistar',amount:130,type:'egreso',src:'BBVA',cat:'Servicios'},
   {date:'2026-02-10',desc:'🎬 Netflix',amount:10,type:'egreso',src:'BBVA',cat:'Servicios'},
   // Mar
   {date:'2026-03-02',desc:'🏠 Habitación',amount:850,type:'egreso',src:'Estimado',cat:'Habitación'},
   {date:'2026-03-02',desc:'👦 Pensión niños (Silvia)',amount:500,type:'egreso',src:'BCP',cat:'Niños (Silvia)'},
-  {date:'2026-03-05',desc:'💛 Bárbara Bardales (BCP)',amount:250,type:'egreso',src:'BCP',cat:'Barbara'},
+  {date:'2026-03-05',desc:'👶 Bárbara Bardales (mamá Mathias) — BCP',amount:250,type:'egreso',src:'BCP',cat:'Barbara'},
   {date:'2026-03-05',desc:'❤ Mamá',amount:100,type:'egreso',src:'BCP',cat:'Mamá'},
   {date:'2026-03-09',desc:'📱 Teléfono Movistar',amount:149.90,type:'egreso',src:'BBVA',cat:'Servicios'},
   {date:'2026-03-14',desc:'🎬 Apple/Netflix',amount:42.90,type:'egreso',src:'BBVA',cat:'Servicios'},
   // Abr
   {date:'2026-04-02',desc:'🏠 Habitación',amount:850,type:'egreso',src:'Estimado',cat:'Habitación'},
   {date:'2026-04-02',desc:'👦 Pensión niños (Silvia)',amount:500,type:'egreso',src:'BCP',cat:'Niños (Silvia)'},
-  {date:'2026-04-02',desc:'💛 Bárbara Bardales',amount:250,type:'egreso',src:'BCP',cat:'Barbara'},
+  {date:'2026-04-02',desc:'👶 Bárbara Bardales (mamá Mathias)',amount:250,type:'egreso',src:'BCP',cat:'Barbara'},
   {date:'2026-04-05',desc:'❤ Mamá',amount:100,type:'egreso',src:'BCP',cat:'Mamá'},
   {date:'2026-04-10',desc:'📱 Teléfono Movistar/Integratel',amount:117.75,type:'egreso',src:'BBVA',cat:'Servicios'},
   {date:'2026-04-14',desc:'🎬 Apple/subs digitales',amount:48.33,type:'egreso',src:'BCP',cat:'Servicios'},
@@ -440,7 +440,7 @@ const txCorreo = [
   // May
   {date:'2026-05-02',desc:'🏠 Habitación',amount:850,type:'egreso',src:'Estimado',cat:'Habitación'},
   {date:'2026-05-02',desc:'👦 Pensión niños (Silvia)',amount:500,type:'egreso',src:'BCP',cat:'Niños (Silvia)'},
-  {date:'2026-05-01',desc:'💛 Bárbara Bardales (BCP)',amount:300,type:'egreso',src:'BCP',cat:'Barbara'},
+  {date:'2026-05-01',desc:'👶 Bárbara Bardales (mamá Mathias) — BCP',amount:300,type:'egreso',src:'BCP',cat:'Barbara'},
   {date:'2026-05-05',desc:'❤ Mamá',amount:100,type:'egreso',src:'BCP',cat:'Mamá'},
   {date:'2026-05-08',desc:'📱 Teléfono Movistar',amount:130,type:'egreso',src:'BBVA',cat:'Servicios'},
 
@@ -601,7 +601,7 @@ function renderFixed(){
   const rows = [
     {key:'habitacion',icon:'🏠',label:'Habitación (editable ↗)',editable:true},
     {key:'silvia',    icon:'👦',label:'Pensión niños — Silvia'},
-    {key:'barbara',   icon:'💛',label:'Bárbara Bardales'},
+    {key:'barbara',   icon:'👶',label:'Bárbara Bardales (mamá de Mathias)'},
     {key:'mama',      icon:'❤',label:'Mamá'},
     {key:'telefono',  icon:'📱',label:'Teléfono Movistar'},
     {key:'netflix',   icon:'🎬',label:'Netflix'},
