@@ -169,91 +169,8 @@ tr:hover td{background:rgba(255,255,255,.015)}
 
 <main>
 
-<div class="slabel">Resumen · <span id="mes-actual-label">Todo el año</span></div>
-<div class="g4" style="margin-bottom:1rem">
-  <div class="card kgreen" style="animation-delay:.05s">
-    <div class="clabel">💚 Ingresos totales</div>
-    <div class="cval" id="kpi-in">—</div>
-    <div class="csub" id="kpi-in-sub"></div>
-  </div>
-  <div class="card kred" style="animation-delay:.1s">
-    <div class="clabel">🔴 Egresos totales</div>
-    <div class="cval" id="kpi-out">—</div>
-    <div class="csub" id="kpi-out-sub"></div>
-  </div>
-  <div class="card kyellow" style="animation-delay:.15s">
-    <div class="clabel">⚖ Balance neto</div>
-    <div class="cval" id="kpi-balance">—</div>
-    <div class="csub" id="kpi-balance-sub"></div>
-  </div>
-  <div class="card kblue" style="animation-delay:.2s">
-    <div class="clabel">🏠 Meta inicial depa · Dic 2026</div>
-    <div class="cval" id="kpi-meta-pct">0%</div>
-    <div class="meta-bar"><div class="meta-fill" id="meta-fill" style="width:0%"></div></div>
-    <div class="csub" id="kpi-meta-sub"></div>
-  </div>
-</div>
-
-<div class="tabs" id="month-tabs"></div>
-
-<div class="slabel">Flujo mensual</div>
-<div class="g21" style="margin-bottom:1rem">
-  <div class="card">
-    <div class="clabel">📊 Ingresos vs Egresos por mes</div>
-    <div class="chart-wrap" style="height:230px"><canvas id="barChart"></canvas></div>
-  </div>
-  <div class="card">
-    <div class="clabel">🗂 Top categorías de gasto</div>
-    <div class="catlist" id="catlist"></div>
-  </div>
-</div>
-
-<div class="slabel">Gastos fijos mensuales · haz click en la habitación para editar</div>
-<div class="g2" style="margin-bottom:1rem">
-  <div class="card">
-    <div class="clabel">🔒 Compromisos fijos</div>
-    <div class="fixedlist" id="fixedlist"></div>
-    <div style="margin-top:.85rem;padding-top:.75rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center">
-      <span style="font-size:.78rem;color:var(--muted2)">Total fijos / mes</span>
-      <span class="badge b-red" id="fixed-total" style="font-size:.8rem">—</span>
-    </div>
-    <div style="margin-top:.45rem;font-size:.75rem;color:var(--muted2)">
-      Ingreso mensual base: <b style="color:var(--accent)" id="ing-base">—</b> &nbsp;·&nbsp;
-      Disponible libre: <b id="ingreso-libre" style="color:var(--warn)">—</b>
-    </div>
-  </div>
-  <div class="card" style="display:flex;flex-direction:column;align-items:center">
-    <div class="clabel" style="justify-content:center">🎯 Tasa de ahorro mensual</div>
-    <div class="ring-wrap">
-      <div class="ring-rel">
-        <svg width="130" height="130" viewBox="0 0 130 130">
-          <circle cx="65" cy="65" r="54" fill="none" stroke="var(--border2)" stroke-width="11"/>
-          <circle cx="65" cy="65" r="54" fill="none" stroke="var(--accent)" stroke-width="11"
-            stroke-dasharray="339.3" stroke-dashoffset="339.3" id="ring-arc"
-            stroke-linecap="round" style="transition:stroke-dashoffset 1.6s ease"/>
-        </svg>
-        <div class="ring-inner">
-          <span class="ring-pct" id="ring-pct">0%</span>
-          <span class="ring-lbl">AHORRO</span>
-        </div>
-      </div>
-      <div class="ring-sub" id="ring-msg"></div>
-    </div>
-    <div style="margin-top:.5rem;font-size:.73rem;color:var(--muted2);text-align:center;line-height:1.6">
-      Para S/ 15,000 en dic 2026<br>
-      necesitas ahorrar <b id="ahorro-needed" style="color:var(--warn)">—</b> / mes
-    </div>
-  </div>
-</div>
-
-<div class="slabel">Tendencia diaria de gasto</div>
+<div class="slabel">＋ Registrar movimiento</div>
 <div class="card" style="margin-bottom:1rem">
-  <div class="chart-wrap" style="height:160px"><canvas id="lineChart"></canvas></div>
-</div>
-
-<div class="slabel">Registrar movimiento manual</div>
-<div class="card" style="margin-bottom:1rem">
-  <div class="clabel">＋ Entrada rápida</div>
   <div class="addform">
     <div class="fg">
       <label class="flabel">Tipo</label>
@@ -296,6 +213,90 @@ tr:hover td{background:rgba(255,255,255,.015)}
   </div>
   <div id="add-alert" style="margin-top:.6rem"></div>
 </div>
+
+<div class="slabel">Resumen · <span id="mes-actual-label">Todo el año</span></div>
+<div class="g4" style="margin-bottom:1rem">
+  <div class="card kgreen" style="animation-delay:.05s">
+    <div class="clabel">💚 Ingresos totales</div>
+    <div class="cval" id="kpi-in">—</div>
+    <div class="csub" id="kpi-in-sub"></div>
+  </div>
+  <div class="card kred" style="animation-delay:.1s">
+    <div class="clabel">🔴 Egresos totales</div>
+    <div class="cval" id="kpi-out">—</div>
+    <div class="csub" id="kpi-out-sub"></div>
+  </div>
+  <div class="card kyellow" style="animation-delay:.15s">
+    <div class="clabel">⚖ Balance neto</div>
+    <div class="cval" id="kpi-balance">—</div>
+    <div class="csub" id="kpi-balance-sub"></div>
+  </div>
+  <div class="card kblue" style="animation-delay:.2s">
+    <div class="clabel">🏠 Meta inicial depa · Dic 2026</div>
+    <div class="cval" id="kpi-meta-pct">0%</div>
+    <div class="meta-bar"><div class="meta-fill" id="meta-fill" style="width:0%"></div></div>
+    <div class="csub" id="kpi-meta-sub"></div>
+  </div>
+</div>
+
+<div class="tabs" id="month-tabs"></div>
+
+<div class="slabel">Flujo mensual</div>
+<div class="g21" style="margin-bottom:1rem">
+  <div class="card">
+    <div class="clabel">📊 Ingresos vs Egresos por mes</div>
+    <div class="chart-wrap" style="height:230px"><canvas id="barChart"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="clabel">🗂 Top categorías de gasto</div>
+    <div class="catlist" id="catlist"></div>
+  </div>
+</div>
+
+<div class="slabel">Gastos fijos mensuales · haz click en cualquier monto para editar</div>
+<div class="g2" style="margin-bottom:1rem">
+  <div class="card">
+    <div class="clabel">🔒 Compromisos fijos</div>
+    <div class="fixedlist" id="fixedlist"></div>
+    <div style="margin-top:.85rem;padding-top:.75rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:.78rem;color:var(--muted2)">Total fijos / mes</span>
+      <span class="badge b-red" id="fixed-total" style="font-size:.8rem">—</span>
+    </div>
+    <div style="margin-top:.45rem;font-size:.75rem;color:var(--muted2)">
+      Ingreso mensual base: <b style="color:var(--accent)" id="ing-base">—</b> &nbsp;·&nbsp;
+      Disponible libre: <b id="ingreso-libre" style="color:var(--warn)">—</b>
+    </div>
+  </div>
+  <div class="card" style="display:flex;flex-direction:column;align-items:center">
+    <div class="clabel" style="justify-content:center">🎯 Tasa de ahorro mensual</div>
+    <div class="ring-wrap">
+      <div class="ring-rel">
+        <svg width="130" height="130" viewBox="0 0 130 130">
+          <circle cx="65" cy="65" r="54" fill="none" stroke="var(--border2)" stroke-width="11"/>
+          <circle cx="65" cy="65" r="54" fill="none" stroke="var(--accent)" stroke-width="11"
+            stroke-dasharray="339.3" stroke-dashoffset="339.3" id="ring-arc"
+            stroke-linecap="round" style="transition:stroke-dashoffset 1.6s ease"/>
+        </svg>
+        <div class="ring-inner">
+          <span class="ring-pct" id="ring-pct">0%</span>
+          <span class="ring-lbl">AHORRO</span>
+        </div>
+      </div>
+      <div class="ring-sub" id="ring-msg"></div>
+    </div>
+    <div style="margin-top:.5rem;font-size:.73rem;color:var(--muted2);text-align:center;line-height:1.6">
+      Para S/ 15,000 en dic 2026<br>
+      necesitas ahorrar <b id="ahorro-needed" style="color:var(--warn)">—</b> / mes
+    </div>
+  </div>
+</div>
+
+<div class="slabel">Tendencia diaria de gasto</div>
+<div class="card" style="margin-bottom:1rem">
+  <div class="chart-wrap" style="height:160px"><canvas id="lineChart"></canvas></div>
+</div>
+
+
 
 <div class="slabel">Movimientos del correo + manuales</div>
 <div class="card" style="padding:0;margin-bottom:1rem">
@@ -596,15 +597,15 @@ function renderKPIs(){
     currentFilter==='all'?'Todo 2026':monthName(currentFilter)+' 2026';
 }
 
-// ── GASTOS FIJOS ──
+// ── GASTOS FIJOS (todos editables) ──
 function renderFixed(){
   const rows = [
-    {key:'habitacion',icon:'🏠',label:'Habitación (editable ↗)',editable:true},
-    {key:'silvia',    icon:'👦',label:'Pensión niños — Silvia'},
-    {key:'barbara',   icon:'👶',label:'Bárbara Bardales (mamá de Mathias)'},
-    {key:'mama',      icon:'❤',label:'Mamá'},
-    {key:'telefono',  icon:'📱',label:'Teléfono Movistar'},
-    {key:'netflix',   icon:'🎬',label:'Netflix'},
+    {key:'habitacion', icon:'🏠', label:'Habitación'},
+    {key:'silvia',     icon:'👦', label:'Pensión niños — Silvia'},
+    {key:'barbara',    icon:'👶', label:'Bárbara Bardales (mamá Mathias)'},
+    {key:'mama',       icon:'❤', label:'Mamá'},
+    {key:'telefono',   icon:'📱', label:'Teléfono Movistar'},
+    {key:'netflix',    icon:'🎬', label:'Netflix'},
   ];
   const total = Object.values(GF).reduce((a,v)=>a+v,0);
   const libre = INGRESO_MENSUAL_BASE - total;
@@ -614,21 +615,25 @@ function renderFixed(){
   document.getElementById('fixedlist').innerHTML = rows.map(r=>`
     <div class="fixedrow">
       <span class="fixedlabel">${r.icon} ${r.label}</span>
-      ${r.editable
-        ? `<span class="fixedamt editable" id="hab-disp" onclick="editHab()">${fmt(GF[r.key])}</span>`
-        : `<span class="fixedamt">${fmt(GF[r.key])}</span>`}
+      <span class="fixedamt editable" id="fix-${r.key}" onclick="editFixed('${r.key}')">${fmt(GF[r.key])}</span>
     </div>
   `).join('');
 }
-function editHab(){
-  const cur = GF.habitacion;
-  const el  = document.getElementById('hab-disp');
-  el.outerHTML = `<input class="fixed-input" id="hab-input" type="number" value="${cur}" onblur="saveHab(this.value)" onkeydown="if(event.key==='Enter')saveHab(this.value)">`;
-  document.getElementById('hab-input').focus();
+function editFixed(key){
+  const cur = GF[key];
+  const el  = document.getElementById('fix-'+key);
+  el.outerHTML = `<input class="fixed-input" id="fix-input-${key}" type="number" value="${cur}"
+    onblur="saveFixed('${key}',this.value)"
+    onkeydown="if(event.key==='Enter')saveFixed('${key}',this.value)">`;
+  document.getElementById('fix-input-'+key).focus();
 }
-function saveHab(v){
+function saveFixed(key, v){
   const n = parseFloat(v);
-  if(!isNaN(n)&&n>0){ GF.habitacion=n; localStorage.setItem('gastosFijos2',JSON.stringify(GF)); renderAll(); }
+  if(!isNaN(n) && n >= 0){
+    GF[key] = n;
+    localStorage.setItem('gastosFijos2', JSON.stringify(GF));
+    renderAll();
+  }
 }
 
 // ── MONTH TABS ──
